@@ -1,0 +1,26 @@
+{
+  "name": "pierre-feuille-ciseaux",
+  "version": "1.0.0",
+  "description": "Initiation au Test Driven Development",
+  "main": "app.js",
+  "scripts": {
+    "start":"node app.js",
+    "watch":"nodemon app.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sherpa1/pierre-feuille-ciseaux.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sherpa1/pierre-feuille-ciseaux/issues"
+  },
+  "homepage": "https://github.com/sherpa1/pierre-feuille-ciseaux#readme",
+  "devDependencies": {
+    "jest": "^28.1.0",
+    "nodemon": "^2.0.16"
+  }
+}
