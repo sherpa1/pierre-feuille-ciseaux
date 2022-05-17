@@ -4,8 +4,8 @@
   "description": "Initiation au Test Driven Development",
   "main": "app.js",
   "scripts": {
-    "start":"node app.js",
-    "watch":"nodemon app.js",
+    "start": "node app.js",
+    "watch": "nodemon app.js",
     "test": "jest"
   },
   "repository": {
@@ -22,5 +22,8 @@
   "devDependencies": {
     "jest": "^28.1.0",
     "nodemon": "^2.0.16"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1"
   }
 }

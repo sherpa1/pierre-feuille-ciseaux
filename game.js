@@ -1,3 +1,5 @@
+const crypto = require('crypto');
+
 const PIERRE = 'Pierre';
 const FEUILLE = 'Feuille';
 const CISEAUX = 'Ciseaux';
@@ -40,7 +42,8 @@ function play() {
 }
 
 function get_random_sign() {
-    const random = Math.floor(Math.random() * (signs.length));
+    //const random = Math.floor(Math.random() * (signs.length));
+    const random = crypto.randomBytes(1); // Compliant for security-sensitive use cases
     return signs[random]
 }
 
