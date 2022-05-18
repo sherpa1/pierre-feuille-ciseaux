@@ -1,10 +1,8 @@
-const crypto = require('crypto');
-
 const PIERRE = 'Pierre';
 const FEUILLE = 'Feuille';
 const CISEAUX = 'Ciseaux';
 
-const signs = [PIERRE, FEUILLE, CISEAUX];
+const SIGNS = [PIERRE, FEUILLE, CISEAUX];
 
 function play() {
     const signs_history = [];
@@ -16,6 +14,7 @@ function play() {
     let winner = null;
 
     while (player1_score < 2 && player2_score < 2) {
+        
         const {
             player1_sign,
             player2_sign,
@@ -26,7 +25,6 @@ function play() {
 
         if (turn_winner === 1) player1_score++;
         if (turn_winner === 2) player2_score++;
-
 
         score_history.push([player1_score, player2_score]);
     }
@@ -42,8 +40,9 @@ function play() {
 }
 
 function get_random_sign() {
-    const random = crypto.randomBytes(1); // Compliant for security-sensitive use cases
-    return signs[random]
+    const random = Math.floor(Math.random() * SIGNS.length);
+    
+    return SIGNS[random];
 }
 
 function get_turn_result() {
@@ -96,7 +95,7 @@ module.exports = {
     play,
     get_random_sign,
     get_turn_winner,
-    signs,
+    SIGNS,
     PIERRE,
     FEUILLE,
     CISEAUX

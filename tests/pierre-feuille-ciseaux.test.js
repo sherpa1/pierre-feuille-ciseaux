@@ -1,4 +1,4 @@
-const { play, get_random_sign, get_turn_winner, signs, PIERRE, FEUILLE, CISEAUX } = require('../game');
+const { play, get_random_sign, get_turn_winner, SIGNS, PIERRE, FEUILLE, CISEAUX } = require('../game');
 
 const { winner, signs_history, score_history } = play();
 
@@ -30,7 +30,7 @@ describe('Turns number in a party', () => {
 
 describe('Signs', () => {
     it('count = 3', () => {
-        expect(signs.length).toBe(3);
+        expect(SIGNS.length).toBe(3);
     });
 });
 
@@ -38,7 +38,7 @@ describe('Signs', () => {
 describe('Random sign', () => {
     it('is Pierre, Feuille or Ciseaux', () => {
         const a_sign = get_random_sign();
-        expect(signs.indexOf(a_sign) > -1).toBeTruthy();
+        expect(SIGNS.indexOf(a_sign) > -1).toBeTruthy();
     });
 });
 
